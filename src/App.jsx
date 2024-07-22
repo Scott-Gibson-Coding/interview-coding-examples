@@ -2,6 +2,7 @@ import {
   StateExample1,
   StateExample2,
   StateExample3,
+  EffectExample1,
   PureFunction1,
 } from "./components/StateExamples";
 
@@ -14,6 +15,8 @@ function App() {
       <StateExample2 />
       <h2>State Example 3</h2>
       <StateExample3 />
+      <h2>Effect Example 1</h2>
+      <EffectExample1 />
       <h2>Pure Function 1</h2>
       <PureFunction1 />
     </>

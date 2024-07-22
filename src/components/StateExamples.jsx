@@ -60,6 +60,33 @@ export function StateExample3() {
   );
 }
 
+/** Maybe make this example a little less obvious. */
+export function EffectExample1() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount(count + 1);
+    }, 50);
+  }, [count]);
+
+  return (
+    <p
+      style={{
+        color: count > 50 ? "red" : "black",
+      }}
+    >
+      {count}
+    </p>
+  );
+}
+
+/**
+ * This example needs some work done. Maybe switch from async
+ * api as a scenario to more robust state management? It should
+ * touch on the concept that state updates for complex Javascript
+ * objects should be pure.
+ */
 const mockEntries = ["a", "b", "c"];
 async function getEntries() {
   return new Promise((resolve) => resolve(mockEntries));
